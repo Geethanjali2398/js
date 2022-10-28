@@ -9,7 +9,7 @@ public class Sample {
 
     int age;
 
-    int marks;
+   
     String name;
 
     @Override
