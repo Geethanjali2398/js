@@ -8,6 +8,8 @@ import java.util.List;
 public class Sample {
 
     int age;
+
+    int marks;
     String name;
 
     @Override
