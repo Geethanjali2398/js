@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+OUTPUT:<input type="text" id="output"/>
+USER:<input type="text" id="user"/><br><br>
+<input type="button" value="length" onclick="show()"/>
+<input type="button" value="sentence" onclick="sentence()"/>
+<input type="button" value="Show first Item" onclick="frontItem()"/>
+<input type="button" value="Show last Item" onclick="lastItem()"/>
+<input type="button" value="Add front value" onclick="front()"/>
+<input type="button" value="Add last value" onclick="push()"/>
+<input type="button" value="Replace" onclick="replace()"/>
+<input type="button" value="SpecificIndex" onclick="specific()"/>
+<p id="answer"></p>
+<script>
+
+  var a = ["idli","pongal","poori","vada"];
+
+  function show(){
+             document.getElementById('answer').innerText=a.length;
+             console.log(a.length);
+             }
+
+  function specific(){
+            var str1 = document.getElementById('output').value;
+            var str= document.getElementById('user').value;
+            var value =a.indexOf(str1);
+            var a1 = a.splice(value,0,str);
+            document.getElementById('answer').innerText=a;
+            }
+
+  function frontItem(){
+        for(var i=0;i<a.length;i++){
+        document.getElementById('answer').innerText=a[0];
+         }}
+
+    function lastItem(){
+        for(var i=0;i<a.length;i++){
+        document.getElementById('answer').innerText=a[a.length-1];
+        }}
+
+    function sentence(){
+        for(var i=0;i<a.length;i++){
+             document.getElementById('answer').innerText=a.join(" ");
+        }}
+
+    function push(){
+            var obj =  document.getElementById('user').value;
+           document.getElementById('answer').innerText=a.push(obj);
+        }
+
+   function replace(){
+            var str1 = document.getElementById('output').value;
+            var str= document.getElementById('user').value;
+            const index = a.indexOf(str1);
+            if (index !== -1) {
+             a[index] = str;}
+            document.getElementById('answer').innerText= a;}
+
+  function front(){
+            var obj1 = document.getElementById('user').value;
+            document.getElementById('answer').innerText=a.unshift(obj1);
+        }
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+  body {
+  font-family: times new romans;
+  background: white;
+  color: black;
+  text-align: center;
+}
+
+.main{
+    width: 500px;
+    height: 250px;
+    border: 2px solid black;
+    background-color: skyblue;
+    margin-left: 356px;
+    margin-top: 161px;
+    padding-top: 37px;
+
+}
+
+
+#clock{
+font-size:50px;
+}
+
+ </style>
+
+</head>
+<body>
+<div class="main">
+    <center><h1 id="title">DIGITAL CLOCK</h1></center>
+    <div id="clock" onload="current_time()" ></div>
+</div>
+
+
+<script>
+
+  function current_time(){
+
+  let date = new Date();
+  let hr = date.getHours();
+  let min = date.getMinutes();
+  let sec = date.getSeconds();
+  let session = " AM";
+
+  if(hr>12){
+  session = " PM" ;
+  }
+
+  hr =(hr<10) ? "0" + hr : hr;
+  min =(min<10) ? "0" + min : min;
+  sec =(sec<10) ? "0" + sec : sec;
+
+
+  let time = hr + ":" + min + ":" + sec + " " + session;
+
+  document.getElementById('clock').innerText  = time;
+  var t = setTimeout(function(){ current_time() }, 1000);
+}
+
+current_time();
+
+</script>
+
+
+</body>
+</html>

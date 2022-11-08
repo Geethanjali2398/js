@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>FACTORIAL</title>
+</head>
+<body>
+<center><h1>FACTORIAL NUMBER</h1></center><br>
+enter a number<input type ="text" id="number" style="margin-left: 55px"/>
+<input type="button" value="ENTER" style="margin-left: 55px" onclick="factorial()"/><br>
+output<input type ="text" style="margin-left: 55px" id="number1"/>
+
+<script>
+
+    function factorial(){
+    var fac=1;
+    var a = document.getElementById('number').value;
+    for(var i=1;i<=a;i++){
+     fac = fac*i;
+ }
+    document.getElementById('number1').value=fac;
+    console.log(fac);
+      }
+
+
+</script>
+
+</body>
+</html>

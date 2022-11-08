@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" value="enter" onclick="value1()"/><br>
+<p id="output">value is :: </p>
+<script>
+
+  function value1(){
+
+  var n=20;
+  var a="I AM WORTHY";
+  var b="I AM ";
+  var c = "WORTHY";
+
+ for (var i=1;i<=n;i++){
+
+            if((i%3==0)&&(i%5==0)){
+               document.getElementById('output').innerText+=a;
+}
+            else if(i%3==0) {
+               document.getElementById('output').innerText+=b;
+}
+            else if(i%5==0) {
+               document.getElementById('output').innerText+=c;
+}
+            else if((i%3!=0)&&(i%5!=0)) {
+                document.getElementById('output').innerText+=i;}
+
+            document.getElementById('output').innerText+="\n";
+        }}
+
+</script>
+
+</body>
+</html>

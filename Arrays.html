@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="submit" onclick="even1()"/>
+<p id="output">ANSWER IS :: </p>
+<!--OUTPUT:<input type="text" id="output"/>-->
+<script>
+
+
+
+
+<!--function even1(){-->
+
+<!--{-->
+<!--        var a = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,8,9,10,11,12,13,14];-->
+<!--        var value = a.filter((n) => n % 2 == 0)-->
+<!--        document.getElementById('output').value =  value;-->
+<!--        let uniqueArr = [...new Set(result)];-->
+<!--        document.getElementById('output').value = uniqueArr;-->
+
+
+
+    function even1()
+    {
+        var arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,8,9,10,11,12,13,14];
+        var result = arr.filter((n) => n % 2 == 0);
+        let uniqueArr = [...new Set(result)];
+        document.getElementById('output').innerText = uniqueArr;
+
+    }
+
+</script>
+
+</body>
+</html>

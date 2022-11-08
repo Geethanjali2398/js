@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WELCOME</title>
+    <style>
+       .form{
+         font-family: sans-serif;
+
+       }
+
+       .button1 {
+    background-color: #4CAF50;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+
+<h1><b><center>DATA ENTRY</center></b></h1>
+<div class ="form">
+FIRSTNAME  <input type="text" required id="Fname" size="50" style="height:76px;margin-left:55px"/>
+LASTNAME   <input type="text" required id="Lname" size="50" style="height:76px;margin-left: 55px"/><br><br>
+    <div class="button"><br>
+    <input type="button" class="button1" onclick="length()" value="FIND LENGTH"/>
+    <input type="button" class="button1" onclick="uppercase()" value="FIND UPPERCASE"/>
+    <input type="button" class="button1" onclick="lowercase()" value="FIND LOWERCASE"/>
+    <input type="button" class="button1" onclick="capitalise()" value="FIND CAPITALISE"/>
+    <input type="button" class="button1" onclick="dots()" value="FIND OVERFLOW"/>
+    <input type="button" class="button1" onclick="remove()" value="REMOVE"/>
+    <input type="button" class="button1" onclick="concat()" value="ADD"/><br><br></div><br><br>
+    <center> OUTPUT  <input type="textarea" size="50" style="height:76px;margin-left: 55px" id="output"/> </center>
+</div>
+
+<script>
+
+    function length(){
+    var word = document.getElementById('Fname').value;
+    document.getElementById('output').value=word.length;
+ }
+    function uppercase(){
+     var word = document.getElementById('Fname').value;
+    document.getElementById('output').value=word.toUpperCase();
+    }
+
+    function lowercase(){
+     var word = document.getElementById('Fname').value;
+    document.getElementById('output').value=word.toLowerCase();
+    }
+
+    function capitalise(){
+     var word = document.getElementById('Fname').value;
+     const words = word.split(" ");
+     for (let i = 0; i < words.length; i++) {
+     words[i] = words[i][0].toUpperCase() + words[i].substr(1);}
+      document.getElementById('output').value=words.join(" ");
+     }
+
+    function dots(){
+    var word = document.getElementById('Fname').value;
+
+     if (word.length <= 20) {
+       document.getElementById('output').value= word;
+      }else{
+      document.getElementById('output').value= word.substring(0, 20) + "...";
+    }}
+
+
+    function remove(){
+     var word = document.getElementById('Fname').value;
+     var word1 = document.getElementById('Lname').value;
+     document.getElementById('output').value=word.replace(word1,"");
+}
+
+    function concat(){
+    var word = document.getElementById('Fname').value;
+    var word1 = document.getElementById('Lname').value;
+     document.getElementById('output').value=word+" "+word1;
+
+    }
+
+
+
+</script>
+</body>
+</html>
